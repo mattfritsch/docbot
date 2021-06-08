@@ -22,6 +22,6 @@ module.exports = class ReplyCommand extends Command{
         });
     }
     async run(msg, { text}){
-        msg.say(`Votre texte est : ${text}`);
+        msg.say(`Votre texte est : "${text}"`);
     }
 }

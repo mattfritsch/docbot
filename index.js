@@ -12,7 +12,6 @@ for (const k in envConfig) {
 const client = new CommandoClient({
     commandPrefix: '!', // Préfixe des commandes (ex: !help)
     owner: process.env.BOT_OWNER_ID, // ID de l'owner du bot
-    disableMentions: 'none', // Désactive oui ou non la mention everyone
     presence: {
         activity: {
             name: `?help | miniMatthieu à votre service`, // message de présence
@@ -45,6 +44,7 @@ client.registry
         ['divers', 'Divers'],
         ['admin', 'Admin'],
         ['bot', 'Bot'],
+        ['games', 'Games'],
     ])
     .registerCommandsIn(path.join(__dirname, 'commands'))
 ;

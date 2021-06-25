@@ -50,4 +50,4 @@ client.registry
 ;
 
 // Lancement du bot, avec le token spécifié
-client.login(process.env.BOT_TOKEN);
+client.login(process.env.TOKEN);

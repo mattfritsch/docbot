@@ -4,11 +4,6 @@ const fs = require('fs')
 const dotenv = require('dotenv')
 
 
-const envConfig = dotenv.parse(fs.readFileSync('.env'))
-for (const k in envConfig) {
-    process.env[k] = envConfig[k]
-}
-
 const client = new CommandoClient({
     commandPrefix: '!', // Préfixe des commandes (ex: !help)
     owner: process.env.BOT_OWNER_ID, // ID de l'owner du bot
